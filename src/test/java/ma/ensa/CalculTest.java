@@ -1,9 +1,11 @@
 package ma.ensa;
 
 
-import org.junit.Before;
-import org.junit.Test;
+
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -14,7 +16,7 @@ import static org.mockito.Mockito.when;
 public class CalculTest {
     Calcul calcul;
     CalculService calculService;
-    @Before
+    @BeforeEach
     public void beforeAll(){
         calculService=mock(CalculService.class);
         calcul =new Calcul(calculService);
